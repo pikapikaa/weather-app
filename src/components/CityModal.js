@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import { Modal, StyleSheet, Text, Pressable, View, Button } from "react-native";
+import { Modal, StyleSheet, Text, Pressable, View, } from "react-native";
 import { cities } from "./../data";
 import { WeatherContext } from "../context/weatherContext";
 import GlobalStyles from "./../GlobalStyles";
+import DefaultButton from "./ui/DefaultButton";
+import Divider from "./ui/Divider";
 
 const CityModal = () => {
   const { fetchWeather, isModalOpen, closeModal } = useContext(WeatherContext);
@@ -26,7 +28,8 @@ const CityModal = () => {
               <Text style={styles.modalText}>{city.name}</Text>
             </Pressable>
           ))}
-          <Button title="Отмена" onPress={closeModal}></Button>
+          <Divider height={15} />
+          <DefaultButton title="Отмена" onPress={closeModal}></DefaultButton>
         </View>
       </View>
     </Modal>
@@ -35,10 +38,10 @@ const CityModal = () => {
 
 const styles = StyleSheet.create({
   modalView: {
-    margin: 20,
     backgroundColor: "white",
     borderRadius: 20,
-    padding: 35,
+    paddingHorizontal: 35,
+    paddingVertical: 15,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   modalText: {
-    marginBottom: 3,
+    marginBottom: 7,
     textAlign: "center",
     fontFamily: "lato-regular",
   },
