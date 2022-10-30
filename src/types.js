@@ -1,0 +1,6 @@
+export const FETCH_WEATHER = "FETCH_WEATHER";
+export const SHOW_LOADER = "SHOW_LOADER";
+export const HIDE_LOADER = "HIDE_LOADER";
+export const TOGGLE_TEMPERATURE = "TOGGLE_TEMPERATURE"; 
+export const CLOSE_MODAL = "CLOSE_MODAL"; 
+export const OPEN_MODAL = "OPEN_MODAL"; 
